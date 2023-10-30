@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Design</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-indigo w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Sinople<br>Cursos</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="https://sinople.itch.io/sinople" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Proyecto</a> 
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
+    <a href="#vision" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vision</a> 
+    <a href="#equipo" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Equipo</a> 
+    <a href="#cursos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cursos</a> 
+    <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-light-grey w3-top w3-hide-large w3-indigo w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-indigo w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Sinople</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container w3-light-grey style="margin-top:80px" id="home">
+    <h1 class="w3-xxxlarge"><b>Educacion</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue-grey"><b>Aprender desde cero.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(15, 1, 17)" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS8xMzM5MDIwOC5wbmc=/original/w7ynEi.png" style="width:100%" onclick="onClick(this)" alt="Algoritmo RRT">
+      <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS8xMzgyMzA0NS5wbmc=/original/sNUlXQ.png" style="width:100%" onclick="onClick(this)" alt="Proyeccion escalar">
+      <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS8xMzgyMzA0Ni5wbmc=/original/0wiL0m.png" style="width:100%" onclick="onClick(this)" alt="Arte digital">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS8xMzgyMzA0Ny5wbmc=/original/i64wsv.png" style="width:100%" onclick="onClick(this)" alt="Programacion de objetos">
+      <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS8xMzgyMzA0OS5wbmc=/original/JDgII5.png" style="width:100%" onclick="onClick(this)" alt="P&ID">
+      <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS8xMzgyMzA0NC5wbmc=/original/OKKDNY.png" style="width:100%" onclick="onClick(this)" alt="Logica de escalera">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container w3-light-grey" id="vision" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue-grey"><b>Vision.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(15, 1, 17)" class="w3-round">
+    <p> Ensenyar de forma clara y dar el "empujonsito" para enrolarte en un camino emocionante de aprendizaje, desarrollo personal
+        y llevarte a nuevos horizontes con la guia de personas que como tu, la pasion por aprender y las ganas de querer conocer
+        mas nos llevo a descubrir nuevos horizontes y experiencias. Se que nadie nace sabiendo y tambien que todos tienen el
+        potencial de desarrollar las habilidades para desempenyarse en los campos relacionados al desarrollo tecnologico.
+        
+    </p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container w3-light-grey" id="equipo" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue-grey"><b>Equipo.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(15, 1, 17)" class="w3-round">
+    <p>Tu duo en esta partida.</p>
+    <p> Soy Martin Carballo, me gradue como ingeniero en instrumentacion electronica en la Universidad Veracruzana. Sin embargo
+        desde la infancia me intereso mucho aprender sobre todos los campos de la ciencia, arte y filosofia. Nunca dejo de
+        aprender cosas nuevas y en diferentes campos, asi como desempenyarme en estos mismos. He trabajado en diferentes campos
+        y en areas diferentes. Ahora quisiera compartir lo que he aprendido para aquellos que. como yo, desean aprender pero 
+        no sepan como empezar en un campo nuevo. Se que al inicio es dificil saber por donde empezar al encontrarse en el
+        inmenso mar de informacion en internet.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS82NDUyMjk5LnBuZw==/original/QWYzDd.png" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Martin Carballo Flores</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Jane Doe</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container w3-light-grey" id="cursos" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-light-grey"><b>Cursos.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(15, 1, 17)" class="w3-round">
+    <p>Los cursos son habiertos para todos. Algunos son muy cortos y otros son de mayor duracion ya que se profundiza mas
+       en los topicos que lo requieren. Procuro hacer las clases lo mas cortas posibles y a la vez explicando todo lo necesario
+       sobre los conceptos, topicos y practicas que se presentan. Tambien se anima a usar la informacion proporcionada como
+       base para que sepas de donde partir si decides investigar por tu cuenta sobre algun tema que te haya llamado la atencion.
+    </p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-indigo w3-xlarge w3-padding-32">Fundamentos de programacion</li>
+        <li class="w3-padding-16">Condeptos basicos</li>
+        <li class="w3-padding-16">Desarrollo de algoritmos</li>
+        <li class="w3-padding-16">Animacion 2D y 3D</li>
+        <li class="w3-padding-16">Programacion orientada a objetos</li>
+        <li class="w3-padding-16">Good deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 0</h2>
+          <span class="w3-opacity">Completamente gratis</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <!--<button  class="w3-button w3-white w3-padding-large w3-hover-black">Iniciar</button>-->
+          <a href="https://www.youtube.com/playlist?list=PLAi_mdY7Fckm0TrFAr3a2C8neKajBCCYX" class="w3-button w3-black">Iniciar</a>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-blue-grey w3-xlarge w3-padding-32">Automatizacion</li>
+        <li class="w3-padding-16">Bases de control industrial</li>
+        <li class="w3-padding-16">Logica de escalera</li>
+        <li class="w3-padding-16">Actuadores</li>
+        <li class="w3-padding-16">P & ID</li>
+        <li class="w3-padding-16">PLC</li>
+        <li class="w3-padding-16">
+          <h2>$ 0</h2>
+          <span class="w3-opacity">Gratis !</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="https://www.youtube.com/playlist?list=PLAi_mdY7Fckn2ul8y1Mdxz2XTB_OlVQ_g" class="w3-button w3-black">Iniciar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container w3-light-grey" id="contacto" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue-grey"><b>Contacto.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(15, 1, 17)" class="w3-round">
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="https://img.itch.zone/aW1hZ2UvMTExNjMyMS82NDUyMzAxLmpwZw==/original/62XBNx.jpg" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Queretaro, MEX<br>
+          <i class="fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +52 2282128716<br>
+          <i class="fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: sinoplegales@gmail.com<br>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://sinople451561654.wordpress.com/" title="W3.CSS" target="_blank" class="w3-hover-opacity">Sinople</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
